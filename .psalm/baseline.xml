@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.x-dev@">
+<files psalm-version="dev-master@665170eadb6cb0728de7f70a52db0b339285f8dc">
   <file src="src/Framework/Assert.php">
     <DeprecatedClass occurrences="12">
       <code>ClassHasAttribute</code>
@@ -152,6 +152,10 @@
       <code>static::assertThat($haystack, $constraint, $message)</code>
       <code>static::assertThat($haystack, $constraint, $message)</code>
     </MissingThrowsDocblock>
+    <PossiblyInvalidArgument occurrences="2">
+      <code>$expected</code>
+      <code>$expected</code>
+    </PossiblyInvalidArgument>
   </file>
   <file src="src/Framework/Assert/Functions.php">
     <DeprecatedClass occurrences="3">
@@ -489,9 +493,6 @@
     </MissingReturnType>
   </file>
   <file src="src/Framework/MockObject/Matcher.php">
-    <DocblockTypeContradiction occurrences="1">
-      <code>$this-&gt;parametersRule === null</code>
-    </DocblockTypeContradiction>
     <InvalidNullableReturnType occurrences="1">
       <code>MethodName</code>
     </InvalidNullableReturnType>
@@ -501,17 +502,9 @@
     <NullableReturnStatement occurrences="1">
       <code>$this-&gt;methodNameRule</code>
     </NullableReturnStatement>
-    <PropertyNotSetInConstructor occurrences="1">
-      <code>$parametersRule</code>
-    </PropertyNotSetInConstructor>
     <RedundantCondition occurrences="1">
       <code>$this-&gt;invocationRule !== null</code>
     </RedundantCondition>
-    <RedundantConditionGivenDocblockType occurrences="3">
-      <code>$this-&gt;parametersRule !== null</code>
-      <code>$this-&gt;parametersRule !== null</code>
-      <code>$this-&gt;parametersRule !== null</code>
-    </RedundantConditionGivenDocblockType>
   </file>
   <file src="src/Framework/MockObject/MockBuilder.php">
     <ArgumentTypeCoercion occurrences="4">
@@ -538,6 +531,17 @@
     <RedundantCastGivenDocblockType occurrences="1">
       <code>(string) var_export($parameter-&gt;getDefaultValue(), true)</code>
     </RedundantCastGivenDocblockType>
+    <RedundantCondition occurrences="1">
+      <code>$type instanceof ReflectionUnionType</code>
+    </RedundantCondition>
+    <TypeDoesNotContainType occurrences="1">
+      <code>$type instanceof ReflectionUnionType</code>
+    </TypeDoesNotContainType>
+    <UndefinedClass occurrences="3">
+      <code>ReflectionUnionType</code>
+      <code>ReflectionUnionType</code>
+      <code>ReflectionUnionType</code>
+    </UndefinedClass>
   </file>
   <file src="src/Framework/MockObject/MockObject.php">
     <MissingParamType occurrences="1">
@@ -787,17 +791,11 @@
     <MissingReturnType occurrences="1">
       <code>doAccept</code>
     </MissingReturnType>
-    <UndefinedInterfaceMethod occurrences="1">
-      <code>current</code>
-    </UndefinedInterfaceMethod>
   </file>
   <file src="src/Runner/Filter/NameFilterIterator.php">
     <PossiblyNullArgument occurrences="1">
       <code>$this-&gt;filter</code>
     </PossiblyNullArgument>
-    <UndefinedInterfaceMethod occurrences="1">
-      <code>current</code>
-    </UndefinedInterfaceMethod>
   </file>
   <file src="src/Runner/Hook/TestListenerAdapter.php">
     <DeprecatedClass occurrences="3">
@@ -1359,20 +1357,12 @@
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/Util/PHP/DefaultPhpProcess.php">
-    <PropertyNotSetInConstructor occurrences="1">
-      <code>$tempFile</code>
-    </PropertyNotSetInConstructor>
     <RedundantCondition occurrences="1">
       <code>$_SERVER</code>
     </RedundantCondition>
     <TypeDoesNotContainNull occurrences="1">
       <code>[]</code>
     </TypeDoesNotContainNull>
-  </file>
-  <file src="src/Util/PHP/WindowsPhpProcess.php">
-    <PropertyNotSetInConstructor occurrences="1">
-      <code>WindowsPhpProcess</code>
-    </PropertyNotSetInConstructor>
   </file>
   <file src="src/Util/Printer.php">
     <PropertyNotSetInConstructor occurrences="1">
